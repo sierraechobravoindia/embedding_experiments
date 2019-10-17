@@ -1,0 +1,67 @@
+\begin{thebibliography}{10}
+
+\bibitem{1708.02709}
+T.~Young, D.~Hazarika, S.~Poria, and E.~Cambria, ``Recent trends in deep
+  learning based natural language processing,'' 2017.
+
+\bibitem{OilandGas}
+F.~Nooralahzadeh, L.~Ovrelid, and J.~T. Lonning, ``{Evaluation of
+  Domain-specific Word Embeddings using Knowledge Resources},'' in {\em
+  Proceedings of the Eleventh International Conference on Language Resources
+  and Evaluation (LREC 2018)} (N.~C.~C. chair), K.~Choukri, C.~Cieri,
+  T.~Declerck, S.~Goggi, K.~Hasida, H.~Isahara, B.~Maegaard, J.~Mariani,
+  H.~Mazo, A.~Moreno, J.~Odijk, S.~Piperidis, and T.~Tokunaga, eds.),
+  (Miyazaki, Japan), European Language Resources Association (ELRA), May 7-12,
+  2018 2018.
+
+\bibitem{word2vec}
+T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean, ``Efficient estimation of word
+  representations in vector space,'' 2013.
+
+\bibitem{pennington2014glove}
+J.~Pennington, R.~Socher, and C.~D. Manning, ``Glove: Global vectors for word
+  representation,'' in {\em Empirical Methods in Natural Language Processing
+  (EMNLP)}, pp.~1532--1543, 2014.
+
+\bibitem{bojanowski2017enriching}
+P.~Bojanowski, E.~Grave, A.~Joulin, and T.~Mikolov, ``Enriching word vectors
+  with subword information,'' {\em Transactions of the Association for
+  Computational Linguistics}, vol.~5, pp.~135--146, 2017.
+
+\bibitem{spacy2}
+M.~Honnibal and I.~Montani, ``{spaCy 2}: Natural language understanding with
+  {B}loom embeddings, convolutional neural networks and incremental parsing.''
+  To appear, 2017.
+
+\bibitem{rehurek_lrec}
+R.~{\v R}eh{\r u}{\v r}ek and P.~Sojka, ``{Software Framework for Topic
+  Modelling with Large Corpora},'' in {\em {Proceedings of the LREC 2010
+  Workshop on New Challenges for NLP Frameworks}}, (Valletta, Malta),
+  pp.~45--50, ELRA, May 2010.
+\newblock \url{http://is.muni.cz/publication/884893/en}.
+
+\bibitem{Loper:2002:NNL:1118108.1118117}
+E.~Loper and S.~Bird, ``Nltk: The natural language toolkit,'' in {\em
+  Proceedings of the ACL-02 Workshop on Effective Tools and Methodologies for
+  Teaching Natural Language Processing and Computational Linguistics - Volume
+  1}, ETMTNLP '02, (Stroudsburg, PA, USA), pp.~63--70, Association for
+  Computational Linguistics, 2002.
+
+\bibitem{1901.09785}
+B.~Wang, A.~Wang, F.~Chen, Y.~Wang, and C.~C.~J. Kuo, ``Evaluating word
+  embedding models: Methods and experimental results,'' 2019.
+
+\bibitem{Schnabel15}
+T.~Schnabel, I.~Labutov, D.~M. Mimno, and T.~Joachims, ``Evaluation methods for
+  unsupervised word embeddings.,'' in {\em EMNLP} (L.~Màrquez,
+  C.~Callison-Burch, J.~Su, D.~Pighin, and Y.~Marton, eds.), pp.~298--307, The
+  Association for Computational Linguistics, 2015.
+
+\bibitem{1801.09536}
+A.~Bakarov, ``A survey of word embeddings evaluation methods,'' 2018.
+
+\bibitem{vanDerMaaten2008}
+L.~van~der Maaten and G.~Hinton, ``Visualizing data using {t-SNE},'' {\em
+  Journal of Machine Learning Research}, vol.~9, pp.~2579--2605, 2008.
+
+\end{thebibliography}
