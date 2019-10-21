@@ -16,8 +16,20 @@
 	\maketitle
 	
 	\section{Definition}
-	\section{Analysis}
+	\subsection{Overview}
+	or Introduction or Context
+	\subsection{Problem Statement}
 	
+	\subsection{Metrics}
+	\section{Analysis}
+	\subsection{The Dataset}
+	The dataset chosen for this project consists of three different sources:
+		\begin{itemize}
+		\item technical / specialist books: 60 titles, 28507 pages, 5950125 words in total 
+		\item internal technical documentation: 17763 change requests for embedded control software with a total of 960921 words\footnote{proprietary, cannot be submitted} 
+		\item patents: 500 patents from the domain vehicle powertrain, containing a total of 9871 pages with a total of 3929993 words.
+	\end{itemize}
+	\subsection{Related Work}
 	Overview over the word embeddings used:
 	\begin{center}
 		\begin{tabular}{|l|p{3cm}| p{3cm}| p{3cm}|}
@@ -36,8 +48,43 @@
 		\end{tabular}
 	\end{center}
 	\section{Methodology}
+	\subsection{Data Preprocessing}
+	\subsection{Implementation}
+	\subsection{Optimization}
 	\section{Results}
+	\subsection{Visualizations}
+	    \begin{center}
+		\includegraphics[scale=0.5]{./Pictures/test.png}
+		\caption{Conic Section}
+	\end{center}
+	
+	My proposed evaluation is best summarized in an empty results table:
+	
+	\begin{center}
+		\begin{tabular}{|l| c| c| c|c|}
+			\hline
+			\textbf{Word Embedding} & $\boldsymbol{M_1}$ & $\boldsymbol{M_2}$ & $\boldsymbol{M_3}$ & $\boldsymbol{M_4}$\\ 
+			\hline
+			word2vec pretrained & \textbullet & \textbullet & \textbullet & \textbullet\\  \hline
+			word2vec retrained & \textbullet & \textbullet & \textbullet & \textbullet\\  	\hline
+			word2vec trained from scratch  & \textbullet & \textbullet & \textbullet & \textbullet\\  	\hline
+			GloVe pretrained & \textbullet & \textbullet & \textbullet & \textbullet\\  
+			\hline
+			GloVe retrained & \textbullet & \textbullet & \textbullet & \textbullet\\
+			\hline
+			GloVe trained from scratch  & \textbullet & \textbullet & \textbullet & \textbullet\\  	
+			\hline
+			FastText pretrained & \textbullet & \textbullet & \textbullet & \textbullet\\  \hline
+			FastText retrained & \textbullet & \textbullet & \textbullet & \textbullet\\  	\hline
+			FastText trained from scratch  & \textbullet & \textbullet & \textbullet & \textbullet\\  	
+			\hline
+			
+			
+		\end{tabular}
+	\end{center}
 	\section{Conclusion}
+	
+	\subsection{Improvement/Future Work}
 	
 	
 	Natural Language Processing as a sub-discipline of machine learning has had major success in recent years on a broad range of natural language related tasks. An overview of recent trends is this field can for example be found in the paper \cite{1708.02709} "Recent Trends in Deep Learning Based Natural Language Processing" by Young et al.. 
