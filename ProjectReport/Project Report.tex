@@ -74,14 +74,14 @@
 	\section{Analysis}
 	\subsection{The Dataset}
 	
-	For a domain specific data corpus I collected scraped the text from the following sources:
+	For a domain specific data corpus I scraped the text from the following sources:
 	\begin{itemize}
 		\item technical / specialist books: 60 titles, 28507 pages, 5950125 words in total 
 		\item internal technical documentation: 17763 change requests for embedded control software with a total of 960921 words\footnote{proprietary, cannot be submitted} 
 		\item patents: 500 patents from the domain vehicle powertrain, containing a total of 9871 pages with a total of 3929993 words.
 	\end{itemize}
 	
-	This data corpus would in principle b easy to scale up. As a company, we have access to electronic versions of books from almost all major publishers in the field. Furthermore we have electronic access to the major journals in the field. The patent database is public and with a paid account we can access an unlimited number of documents.
+	This data corpus would in principle be easy to scale up. As a company, we have access to electronic versions of books from almost all major publishers in the field. Furthermore we have electronic access to the major journals in the field. The patent database is public and with a paid account we can access an unlimited number of documents.
 	The internally available data is of course limited, however only a fraction of the available data was used in this project.      
 	 
     \subsection{Algorithms and Techniques}
@@ -197,33 +197,33 @@
 \end{figure}
 
 \subsection{Quantitative Results}
-	The metrics \textbf{$M_1$}--\textbf{$M_4$} produce qunatitavie results that are summarized in table \ref*{results}
+	The metrics \textbf{$M_1$}--\textbf{$M_4$} produce qunatitavie results that are summarized in the following table 
 	
 	\begin{center}
 		\begin{tabular}{|l| c| c| c|c|}
 			
 			\hline
 			
-			\textbf{Word Embedding} & $\boldsymbol{M_1}$ & $\boldsymbol{M_2}$ & $\boldsymbol{M_3}$ & $\boldsymbol{M_4}$\\ \hline
+			 & $\boldsymbol{M_1}$ & $\boldsymbol{M_2}$ & $\boldsymbol{M_3}$ & $\boldsymbol{M_4}$\\ \hline
 			
-			Units & Test Acc [\%]& Train Acc [\%] & Top-10 & \textsc{Pearson} Corr \\ \hline
-		    Generic German FastText   & 7x6,3 & 67.4 & \textbullet & -0.28\\  \hline
+			\textbf{Word Embedding} & Test Acc [\%]& Train Acc [\%] & Top-10 & \textsc{Pearson} Corr \\ \hline
+		    Generic German FastText   & 80.0 & 67.4 & 0 & -0.28\\  \hline
 			
-			domain specific word2vec  & 81.9 & 88.4 & \textbullet & 0.42\\  \hline
+			domain specific word2vec  & 83,6 & 88.4 & 1-Top1,2 & 0.42\\  \hline
 			
-			domain specific FastText  & 8x4,5 &90.7 & \textbullet & 0.41\\ \hline 
+			domain specific FastText  & 84.5 & 90.7 & 1-Top5  & 0.41\\ \hline 
 		
 		\end{tabular}
-	\label{results}
 	\end{center}
 
 \paragraph{$\boldsymbol{M_1}$ Downstream Classification}
 
-\paragraph{$\boldsymbol{M_2}$ Subsystem Classification in Embedding Space}
-The results suggest that the embeddings trained on domain specific data can separate the subsystems of the vehicle quite well, whereas the generic model performs significantly worse in this regard. FastText might have an edge over word2vec due to it's property of using character n-grams as the smallest entity, whereas word2vec only hat complete words as entity. This might help to correctly classify compund nouns. 
+Before we discuss the results of the remaining measures, a caveat is in order: The process to aqcuire and score the list of word pairs would not hold up to any scientific standard whatsoever, so every interpretation of the results is speculative. Plus the number of word pairs used is tiny, from the originally planned 60 only 16 were used, as the others are not in all embeddings (especially the generic FastText). 
+
+\paragraph{$\boldsymbol{M_2}$ Subsystem Classification in Embedding Space} The results suggest that the embeddings trained on domain specific data can separate the subsystems of the vehicle quite well, whereas the generic model performs significantly worse in this regard. FastText might have an edge over word2vec due to it's property of using character n-grams as the smallest entity, whereas word2vec only hat complete words as entity. This might help to correctly classify compund nouns. 
 
 \paragraph{$\boldsymbol{M_3}$ Word Analogy}
-
+6 analogies with automotive specific meaning were randomly picked. A point is given for every correctly found analogy in the top-10. Both specifically trained embeddings get one analogy right, whereas the generic embedding does not produce any analogy. The word2vec produces the analogy with Top-1 and Top-2 whereas the fasttext embedding gets it with Top-5 only.
 
 \paragraph{$\boldsymbol{M_4}$ Word Similarity} Before we discuss the results of this measure, a caveat is in order: The process to aqcuire and score the list of word pairs would not hold up to any scientific standard whatsoever, so every interpretation of the results is speculative. Plus the number of word pairs used is tiny, from the originally planned 60 only 16 were used, as the others are not in all embeddings (especially the generic FastText). 
 The similarity measure used is a \textsc{Pearson}.coefficient between the human similarity score and the cosine similarity of the embedding. 
@@ -232,10 +232,14 @@ The results would suggest, that only the domain specific embeddings capture the 
 
 
 
-	\section{Conclusion}
+\section{Conclusion}
+	
+By all metrics employed, the generic Facebook FastText model performed worse than the domain specific models. This is remarkable, because the data corpus used to train the generic embedding	is of the size 6-16 billion words, whereas we trained the domain specific embeddings on a corpus of a little less than 11 million words, three orders of magnitude smaller.
 	
 	\subsection{Reflection}
-	Here I mention that I totally underestimated the challange of my proposal and why...
+	
+	First of all, I 
+	
 	\subsection{Improvement/Future Work}
 	Here I will mainly mention the program that I laid out in the proposal and did not yet finish. Plus I draw conclusions from the findings.
 		Overview over the word embeddings used:

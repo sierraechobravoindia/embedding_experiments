@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.17)  22 OCT 2019 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.17)  22 OCT 2019 23:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -374,7 +374,7 @@ Package pdftex.def Info: ./Pictures/model_ds_w2v_motor_getriebe.png  used on in
 put line 194.
 (pdftex.def)             Requested size: 292.28682pt x 215.20018pt.
 
-Overfull \hbox (40.80017pt too wide) in paragraph at lines 203--218
+Overfull \hbox (48.57797pt too wide) in paragraph at lines 203--217
  [] 
  []
 
@@ -382,65 +382,65 @@ Overfull \hbox (40.80017pt too wide) in paragraph at lines 203--218
 iesel.png>] [8 <./Pictures/model_ds_w2v_benzin_diesel.png> <./Pictures/model_ft
 _motor_getriebe.png>] [9 <./Pictures/model_ds_ft_motor_getriebe.png> <./Picture
 s/model_ds_w2v_motor_getriebe.png>]
-Underfull \hbox (badness 3989) in paragraph at lines 247--248
+Underfull \hbox (badness 3989) in paragraph at lines 250--251
 []\OT1/cmr/m/n/10 done w/ Gen-Sim
  []
 
 
-Underfull \hbox (badness 1748) in paragraph at lines 249--250
+Underfull \hbox (badness 1748) in paragraph at lines 252--253
 []\OT1/cmr/m/n/10 n.a., needs global
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--251
+Underfull \hbox (badness 10000) in paragraph at lines 254--254
 []\OT1/cmr/m/n/10 from Facebook-
  []
 
 
-Underfull \hbox (badness 3240) in paragraph at lines 251--252
+Underfull \hbox (badness 3240) in paragraph at lines 254--255
 []\OT1/cmr/m/n/10 done w/ un-doc-u-
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 251--252
+Underfull \hbox (badness 1436) in paragraph at lines 254--255
 \OT1/cmr/m/n/10 mented fea-ture in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 \OT1/cmr/m/n/10 Face-book im-ple-
  []
 
 
-Overfull \hbox (47.78268pt too wide) in paragraph at lines 243--254
+Overfull \hbox (47.78268pt too wide) in paragraph at lines 246--257
  [] 
  []
 
 [10]
-Overfull \hbox (32.74696pt too wide) in paragraph at lines 265--266
+Overfull \hbox (32.74696pt too wide) in paragraph at lines 268--269
 [][]$\OT1/cmtt/m/n/10 https : / / github . com / kudkudak / word-[]embeddings-[
 ]benchmarks / blob / master /
  []
 
 (./Project Report.bbl [11])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
  [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
  (./Project Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
 Package rerunfilecheck Info: File `"Project Report".out' has not changed.
 (rerunfilecheck)             Checksum: 543C7211163B92864723F85EBA24B41C;1203.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
  ) 
 Here is how much of TeX's memory you used:
- 6208 strings out of 492982
- 89650 string characters out of 6134896
- 174762 words of memory out of 5000000
- 9621 multiletter control sequences out of 15000+600000
+ 6207 strings out of 492982
+ 89641 string characters out of 6134896
+ 174712 words of memory out of 5000000
+ 9620 multiletter control sequences out of 15000+600000
  15556 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,12n,28p,1324b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,12n,28p,1324b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
@@ -457,7 +457,7 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "Project Report.pdf" (12 pages, 441702 bytes).
+Output written on "Project Report.pdf" (12 pages, 442560 bytes).
 PDF statistics:
  319 PDF objects out of 1000 (max. 8388607)
  273 compressed objects within 3 object streams
