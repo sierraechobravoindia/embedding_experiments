@@ -1,0 +1,28 @@
+\contentsline {section}{\numberline {1}Definition}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Overview}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Problem Statement}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Metrics}{2}{subsection.1.3}
+\contentsline {section}{\numberline {2}Analysis}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}The Dataset}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Algorithms and Techniques}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Benchmark Models}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Related Work}{4}{subsection.2.4}
+\contentsline {section}{\numberline {3}Methodology}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Data Preprocessing}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Implementation}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Optimization}{5}{subsection.3.3}
+\contentsline {paragraph}{Optimizing the embeddings}{5}{section*.2}
+\contentsline {paragraph}{Optimizing the classifier}{5}{section*.3}
+\contentsline {section}{\numberline {4}Results}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Visualizations}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Quantitative Results}{6}{subsection.4.2}
+\contentsline {paragraph}{$\boldsymbol {M_1}$ Downstream Classification}{6}{section*.4}
+\contentsline {paragraph}{$\boldsymbol {M_2}$ Subsystem Classification in Embedding Space}{10}{section*.5}
+\contentsline {paragraph}{$\boldsymbol {M_3}$ Word Analogy}{10}{section*.6}
+\contentsline {paragraph}{$\boldsymbol {M_4}$ Word Similarity}{10}{section*.7}
+\contentsline {section}{\numberline {5}Conclusion}{10}{section.5}
+\contentsline {subsection}{\numberline {5.1}Reflection}{10}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Improvement/Future Work}{10}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Additional Research Questions}{10}{subsection.5.3}
+\contentsline {paragraph}{Extra Dimesions.}{11}{section*.8}
+\contentsline {paragraph}{Compund Nouns.}{11}{section*.9}

@@ -14,26 +14,231 @@
 	\title{Natural Language Processing for tasks with specialized domain language  --  Project Report}
 	\author{data.camp097@audi.de}
 	\maketitle
-	
+	\tableofcontents
 	\section{Definition}
+	
+	
 	\subsection{Overview}
-	or Introduction or Context
+	Natural Language Processing as a sub-discipline of machine learning has had major success in recent years on a broad range of natural language related tasks. 
+	There exist many not yet automated and potentially very useful NLP tasks in the automotive industry, ranging from automated scanners for the monitoring of (social) media with respect to potential quality or safety problems (a legal requirement for manufacturers), automated analysis of warranty and repair documents, systems for customer support, monitoring and analysis of patent applications to identify trends and many more. However, when confronted with highly specialized sub-domain languages like automotive engineering, commercial off the shelf (COTS) products decline in performance, often up to a point of being useless \cite{OilandGas}. 
+    
+
 	\subsection{Problem Statement}
 	
+	One key element of many NLP pipelines are word embeddings, dense vecor representations of the vocabulary. Examples of these methods are word2vec \cite{word2vec}, GloVe \cite{pennington2014glove} or FastText \cite{bojanowski2017enriching}. These word embeddings are able to represent (surprisingly) much semantic and syntactic meaning, which makes downstream tasks in general much easier. However, to learn this, the embeddings have to be trained extensively, state of the art is basically a coyy of large chunks from the internet (a complete Wikipedia dump beeing at the lowest end). When it comes to sub-domain language, we face a problem: This data is in general not easily available, often proprietary or copyrighted and never as abundant as general text. The basic hypothesis for this capstone project is the assumption that the dominant problem of NLP algorithms operating on specialized domain languages is the fact that during training the algorithm hasn't seen any or enough domain specific text. For this reason I trained two different vector representations, the classic word2vec and the more recent FastText on a self-aquired domain specific data corpus and compared it with different metrics to a generic model, the Facebook German Fasttext Model.
+		
 	\subsection{Metrics}
+	\label{eval}
+	The evaluation of word embeddings is no easy task. To the best of my knowledge, there does not exist a single commonly used or agreed upon method on how to evaluate these models\cite{1901.09785, Schnabel15, 1801.09536}. Instead a range of methods is used. These methods fall in two categories, extrinsic and intrinsic. Intrinsic evaluation takes into consideration only the embedding itself whereas extrinsic methods measure the embedding performance indirectly by a downstream NLP task with its own metric. For this project, I implemented the following metrics to compare the different embedings:
+	
+	\begin{itemize}
+		\item \textbf{$M_1$}: Extrinsic measure: A real world multiclass classification task of software change requests (CRQ) for embedded control software. The classification separates the CRQs by topic to forward it directly to the right experts and change control boards.\footnote{The CRQs themselfes are confidential and cannot be published or submitted.}  
+		
+		For the classification task, I built an LSTM with the word embedding as a first (untrainable layer). The architecture itself is pretty basic using an attention layer. \footnote{ Adopted from \url{https://github.com/philipperemy/keras-attention-mechanism}}
+		The motivation for the attention layer is the fact, that the engineers are encouraged to use a certain structure to describe the CRQ. Therefore it might be possible, to focus the attention to certain areas of the CRQ for classification. 
+		
+		The model itself can be found in the notebook "LSTM.ipynb".
+		
+		\item \textbf{$M_2$}: Clustering by subsystem. A vehicle is built from subsystems like engine, transmission, exhaust system, etc.. For 5 subsystems we will pick representative 10 representative words that will represent this subsystem. 
+		
+		The basic idea of this metric is then to leverage clustering or classification in the vector space of the embedding itself. As the metric for word embeddings is the consine distance, 
+		\begin{equation}
+		d(\bold{a}, \bold{b})=\cos(\theta)=\frac{\bold{a} \cdot \bold{b}}{|\bold{a}|\cdot|\bold{b}|}
+		\end{equation}
+		the clustering or classifcation algorithms will have to use this as a measure of distance.
+		
+		To generate a metric out of this idea, I chose KNN classification with cosine distance and use the train(!) error as the metric. This is motivated by the intuition, that KNN classification only works if the subsystems are tightly grouped and have distance to other clusters. 
+
+		
+		\item \textbf{$M_3$}: Word analogy. Another intrinsic metric for word embddings is to assess semantic meaning. We look for relations of the form
+		$$ a:b::c:d $$
+		In particular, we will assess the semantic representation of technical concepts. Two examples are 
+		$$\text{engine : engine control unit :: transmission : transmission control unit}$$
+		$$\text{camshaft : camshaft bearing :: crankshaft : crankshaft bearing}$$
+		
+		We can extract the word d from words a,b and c from the embedding simply with
+		\begin{equation}
+		d=\argmax_{i} \frac{(x_b -x_a + x_c)^T\cdot x_i}{|x_b-x_a+x_c|}
+		\end{equation}
+		
+		For this to become a metric, I simply count the number of word analogies the embeddings get right in their Top-n list. 
+		
+		
+		
+		\item \textbf{$M_4$: Word similarity}. A well known metric is the correlation with human similarity scores (like wordsim353...) pairs of words from technical jargon and ask colleagues to rate their similarity. This measure of similarity will then be compared to the cosine distance the embeddings produce for these word pairs. This metric can also be adopted to include relatedness instead of similarity.
+		
+		\item \textbf{$M_5$}: As a qualitative measure I visualized the embeddings using t-SNE \cite{vanDerMaaten2008} to get a comparative qualitative measure.
+		
+	\end{itemize}
+	
 	\section{Analysis}
 	\subsection{The Dataset}
-	The dataset chosen for this project consists of three different sources:
-		\begin{itemize}
+	
+	For a domain specific data corpus I collected scraped the text from the following sources:
+	\begin{itemize}
 		\item technical / specialist books: 60 titles, 28507 pages, 5950125 words in total 
 		\item internal technical documentation: 17763 change requests for embedded control software with a total of 960921 words\footnote{proprietary, cannot be submitted} 
 		\item patents: 500 patents from the domain vehicle powertrain, containing a total of 9871 pages with a total of 3929993 words.
 	\end{itemize}
-    \subsection{Algorithms}
+	
+	This data corpus would in principle b easy to scale up. As a company, we have access to electronic versions of books from almost all major publishers in the field. Furthermore we have electronic access to the major journals in the field. The patent database is public and with a paid account we can access an unlimited number of documents.
+	The internally available data is of course limited, however only a fraction of the available data was used in this project.      
+	 
+    \subsection{Algorithms and Techniques}
     \subsection{Benchmark Models}
-    As a benchmark I chose the pretrained German Facebook FastText embedding. \footnote{\url{www.spiegel.de}}
+    As a benchmark I chose the pretrained German Facebook FastText embedding.  \footnote{\url{https://fasttext.cc/docs/en/crawl-vectors.html}}
+    
+    As a benchmark, I propose taking an existing trained word embedding. For all the mentioned word embeddings (Word2vec, GloVe, FastText) there exist extensively pretrained models for many languages in NLP Toolkits like spacy \cite{spacy2}, gensim \cite{rehurek_lrec} or NLTK \cite{Loper:2002:NNL:1118108.1118117} or GitHub (cf. Section \ref{web_resources}). For details on how to get from a word embedding to an evaluation metric, please refer to section \ref{eval} Evaluation Metrics.
+    
 	\subsection{Related Work}
-	Overview over the word embeddings used:
+
+    I found one paper with a similar goals \cite{OilandGas} from the Oil and Gas Industry. The paper describes a similar problem and focusses on the embeddings as well. As a novel element they define word similarity by analysis of knowledge database instead of relying on human judgement.
+			
+	\section{Methodology}
+	As a general remark,  NLP Toolkits like spacy \cite{spacy2}, gensim \cite{rehurek_lrec} or NLTK \cite{Loper:2002:NNL:1118108.1118117}
+	
+	
+	\subsection{Data Preprocessing}
+	For the preprocessing, the following steps were taken:
+	\begin{itemize}
+		\item Scraping war text from pdf. This is done with the Python packages "textract" and "PyPDF2". Used on the patents and the books, the CRQs were scraped directly to raw text via SQL from a database.
+		\item The structure of the data is a list of lists, the inner lists being the scope over which the windows run while training.
+		\item The raw text is serialzied to disk using pickle.
+		\item The raw text is stripped of punctuation, numerics, multiple whitespace, words shorter than 3 letters, and German stop words. It is lower-cased and split. A lemmatizer was integrated but not used due to runtime considerations. The lsit of German stop words was imported from the python package "get\_stop\_words", the preporcessing was mainly done with the package "gensim" preprocessing functions.
+		\item The preprocessed text is serialized to disk using pickle,
+	\end{itemize}
+    The scraping and preprocessing is implemented in the notebook "Data Collection.ipynb". 
+    
+	\subsection{Implementation}
+	Training the embeddings was done using the package "gensim". 
+	
+	The training of the embeddings is implemented in the notebook "Embeddings.ipynb"
+	
+	\subsection{Optimization}
+	
+	\paragraph{Optimizing the embeddings}
+	To optimize the embeddings, a few options are available.
+	\begin{itemize}
+		\item Increasing the embedding size. I generously started with an emedding size of 300, which is often used. It might be worthwhile to experiment with this parameter, especially to see if reducing the size does lower the performance in a measurable way. 
+		\item More training data: As the training data is unlabelled, it is feasible to massively increase the amount of domain specific training data. I would assume that at least a factor of 100 would be possible.
+		\item Using different embedding algorithms. So far, I used only 2 widely used algorithms, word2vec and FastText, but there are many more established algorithms with will documented strengths and weaknesses. It might be worthwhile to see if improvements could be made by choosing more wisely.
+		\item Retraining a pretrained network. For some embedding algorithms it is possible to retrain them on additional data. It would be interesting to measure the performance of a retrained embedding and compare the results to the exclusively trained embeddings used in this project. In theory it might be possible to somehow bring the good general performance and the domain specific training together.
+	\end{itemize}
+	
+	
+	\paragraph{Optimizing the classifier}
+	Even though the classifier is mainly used as a metric to evaluate the different embeddings, some very basic optimization was done before using it. The overall goal is to prevent overfitting and increase test accuracy. 
+	
+	The networt currently still seems to overfit. This is not surprising considering the very small number of available labelled samples and the relatively large capacity of the network.
+	
+	To prevent overfitting, the following steps were taken:
+	\begin{itemize}
+		\item Early termination was implemented in the learning. 
+		\item Dropout was applied extensively through the network (between layers and recurrently inside the LSTM layer). Dropout rate used is 0.4 everywhere.
+		\item Model Capacity was reduced by decreasing the size of the LSTM internal state to 80)
+	\end{itemize}
+    Other options that were not thoroughly explored in this project include
+	\begin{itemize}
+		\item Regularization. Not yet included.
+		\item Data augmentation. Cropping might be an option, but was not explored.
+		\item Acquisistion of more data. Always an option :-)
+	\end{itemize}
+	\section{Results}
+	\subsection{Visualizations}
+	To get a qualitative impression of what the embeddings learned to represent I produced t-SNE plots for the 20 nearest neighbours of two different word pairs: ('Motor', 'Getriebe') (meaning engine and transmission, respectively) and ('Benzin', 'Diesel') (meaning gasoline and diesel, respectively). 
+	
+	From an engineers point of view these groups of words should be clearly separated as they refer to different subsystems or different classes of internal combustion engines.
+	
+	The following plots mainly show the degree of separation the embeddings assigned to these groups of words. The specifically trained FastText clearly stands out here as it seems to be able to distinguish between these clusters of words. 
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=0.4]{./Pictures/model_ft_benzin_diesel.png}
+		
+		\caption{t-SNE for generic FastText on word pair ('Benzin', 'Diesel')}
+	\end{center}
+\end{figure}
+	
+\begin{figure}
+	\begin{center}
+	\includegraphics[scale=0.4]{./Pictures/model_ds_ft_benzin_diesel.png}
+	
+	\caption{t-SNE for domain specific FastText on word pair ('Benzin', 'Diesel')}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+	\includegraphics[scale=0.4]{./Pictures/model_ds_w2v_benzin_diesel.png}
+	\caption{t-SNE for domain specific wor2vec on word pair ('Benzin', 'Diesel')}
+\end{center}	
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=0.4]{./Pictures/model_ft_motor_getriebe.png}
+		
+		\caption{t-SNE for generic FastText on word pair ('Motor', 'Getriebe')}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=0.4]{./Pictures/model_ds_ft_motor_getriebe.png}
+		
+		\caption{t-SNE for domain specific FastText on word pair ('Motor', 'Getriebe')}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=0.4]{./Pictures/model_ds_w2v_motor_getriebe.png}
+		\caption{t-SNE for domain specific wor2vec on word pair ('Motor', 'Getriebe')}
+	\end{center}	
+\end{figure}
+
+\subsection{Quantitative Results}
+	The metrics \textbf{$M_1$}--\textbf{$M_4$} produce qunatitavie results that are summarized in table \ref*{results}
+	
+	\begin{center}
+		\begin{tabular}{|l| c| c| c|c|}
+			
+			\hline
+			
+			\textbf{Word Embedding} & $\boldsymbol{M_1}$ & $\boldsymbol{M_2}$ & $\boldsymbol{M_3}$ & $\boldsymbol{M_4}$\\ \hline
+			
+			Units & Test Acc [\%]& Train Acc [\%] & Top-10 & \textsc{Pearson} Corr \\ \hline
+		    Generic German FastText   & 7x6,3 & 67.4 & \textbullet & -0.28\\  \hline
+			
+			domain specific word2vec  & 81.9 & 88.4 & \textbullet & 0.42\\  \hline
+			
+			domain specific FastText  & 8x4,5 &90.7 & \textbullet & 0.41\\ \hline 
+		
+		\end{tabular}
+	\label{results}
+	\end{center}
+
+\paragraph{$\boldsymbol{M_1}$ Downstream Classification}
+
+\paragraph{$\boldsymbol{M_2}$ Subsystem Classification in Embedding Space}
+The results suggest that the embeddings trained on domain specific data can separate the subsystems of the vehicle quite well, whereas the generic model performs significantly worse in this regard. FastText might have an edge over word2vec due to it's property of using character n-grams as the smallest entity, whereas word2vec only hat complete words as entity. This might help to correctly classify compund nouns. 
+
+\paragraph{$\boldsymbol{M_3}$ Word Analogy}
+
+
+\paragraph{$\boldsymbol{M_4}$ Word Similarity} Before we discuss the results of this measure, a caveat is in order: The process to aqcuire and score the list of word pairs would not hold up to any scientific standard whatsoever, so every interpretation of the results is speculative. Plus the number of word pairs used is tiny, from the originally planned 60 only 16 were used, as the others are not in all embeddings (especially the generic FastText). 
+The similarity measure used is a \textsc{Pearson}.coefficient between the human similarity score and the cosine similarity of the embedding. 
+The results would suggest, that only the domain specific embeddings capture the similarities, whereas the generic model does not represent any domain specific semantics. This result is to be expected, but would have to be shown in a more rigorous manner.  
+
+
+
+
+	\section{Conclusion}
+	
+	\subsection{Reflection}
+	Here I mention that I totally underestimated the challange of my proposal and why...
+	\subsection{Improvement/Future Work}
+	Here I will mainly mention the program that I laid out in the proposal and did not yet finish. Plus I draw conclusions from the findings.
+		Overview over the word embeddings used:
 	\begin{center}
 		\begin{tabular}{|l|p{3cm}| p{3cm}| p{3cm}|}
 			\hline
@@ -45,170 +250,16 @@
 			\hline
 			FastText & from Facebook-Page,  & w/ Facebook implementation & done w/ undocumented feature in Facebook implementation\\
 			\hline
-			 	
-			
-			
-		\end{tabular}
-	\end{center}
-	\section{Methodology}
-	\subsection{Data Preprocessing}
-	For 
-	\subsection{Implementation}
-	Training the embeddings
-	
-	\subsection{Optimization}
-	One problem seems to be overfitting to the small number of currently available labelled samples. The learning curves suggest this.
-	
-	To prevent overfitting, the following steps were taken:
-	\begin{itemize}
-		\item Early termination.
-		\item Dropout. 
-		\item Model Capacity. 
-	\end{itemize}
-    Other options that were not thoroughly explored in this project include
-	\begin{itemize}
-		\item Regularization.
-		\item Data augmentation
-		\item Acquisistion of more data.
-	\end{itemize}
-	\section{Results}
-	\subsection{Visualizations}
-	    \begin{center}
-		\includegraphics[scale=0.5]{./Pictures/test.png}
-		\caption{Conic Section}
-	\end{center}
-	
-	My proposed evaluation is best summarized in an empty results table:
-	
-	\begin{center}
-		\begin{tabular}{|l| c| c| c|c|}
-			\hline
-			\textbf{Word Embedding} & $\boldsymbol{M_1}$ & $\boldsymbol{M_2}$ & $\boldsymbol{M_3}$ & $\boldsymbol{M_4}$\\ 
-			\hline
-			word2vec pretrained & \textbullet & \textbullet & \textbullet & \textbullet\\  \hline
-			word2vec retrained & \textbullet & \textbullet & \textbullet & \textbullet\\  	\hline
-			word2vec trained from scratch  & \textbullet & \textbullet & \textbullet & \textbullet\\  	\hline
-			GloVe pretrained & \textbullet & \textbullet & \textbullet & \textbullet\\  
-			\hline
-			GloVe retrained & \textbullet & \textbullet & \textbullet & \textbullet\\
-			\hline
-			GloVe trained from scratch  & \textbullet & \textbullet & \textbullet & \textbullet\\  	
-			\hline
-			FastText pretrained & \textbullet & \textbullet & \textbullet & \textbullet\\  \hline
-			FastText retrained & \textbullet & \textbullet & \textbullet & \textbullet\\  	\hline
-			FastText trained from scratch  & \textbullet & \textbullet & \textbullet & \textbullet\\  	
-			\hline
-			
-			
-		\end{tabular}
-	\end{center}
-	\section{Conclusion}
-	\subsection{Reflection}
-	\subsection{Improvement/Future Work}
-	
-	
-	Natural Language Processing as a sub-discipline of machine learning has had major success in recent years on a broad range of natural language related tasks. An overview of recent trends is this field can for example be found in the paper \cite{1708.02709} "Recent Trends in Deep Learning Based Natural Language Processing" by Young et al.. 
-	However, when confronted with highly specialized sub-domain languages, commercial off the shelf (COTS) products decline in performance, often up to a point of being useless \cite{OilandGas}. As an example from personal experience, I would like to mention the use of Google Translate, a benchmark NLP product, on translating text from climbing guidebooks. The results are funny, but utterly useless.
-	
-	Another example more relevant for this work is the author's area of expertise, automotive engineering. There exist many potentially useful NLP tasks in the automotive industry, ranging from automated scanners for the monitoring of (social) media with respect to potential quality or safety problems (a legal requirement for manufacturers), automated analysis of warranty and repair documents, systems for customer support, monitoring and analysis of patent applications to identify trends and many more.
-	As in the example of climbing guidebooks, the results of COTS products when confronted with this form of specialized sub-domain language are usually poor. 
-	The topic of the capstone project is to make the first steps to remedy this situation. In particular, we will try to improve the word embeddings for our subdomain of interest.
-	
-	\section{Problem Statement}
-	The basic hypothesis for this capstone project is the assumption that the dominant problem of NLP algorithms operating in highly specialized domain languages is the fact that during training the algorithm hasn't seen any or enough domain specific text. 
-	One important element of most modern NLP pipelines is a dense vector representation, also referred to as word embedding, instead of sparse representations like one-hot-encoding or bag-of-words. Examples of these methods are word2vec \cite{word2vec}, GloVe \cite{pennington2014glove} or FastText \cite{bojanowski2017enriching}. I assume that in particular these representations are not trained well enough on domain-specific language. 
-	
-	\section{Datasets and Inputs}
-	The dataset consists of 3 different types of technical documents in German:
-	\begin{itemize}
-		\item technical / specialist books: 60 titles, 28507 pages, 5950125 words in total 
-		\item internal technical documentation: 17763 change requests for embedded control software with a total of 960921 words\footnote{proprietary, cannot be submitted} 
-		\item patents: 500 patents from the domain vehicle powertrain, containing a total of 9871 pages with a total of 3929993 words.
-	\end{itemize}
-
-	This data will have to be preprocessed. Preprocessing includes cleaning the documents from things like stopwords, interpunctuation and capitalization. After this a tokenizer and lemmatizer will be used. The preprocessed text will then be used for training of the word embedding.
-	
-	\section{Solution Statement}
-	In a word: Train word embeddings on text from the subdomain of interest.
-	First I propose to review the different existing word embeddings like Word2vec, GloVe or  FastText and pick one to work with. An important part of the research will be the question of how to make sure the embedding performs well on both text in general \textbf{and} the domain language. To achive this, I aim at using some sort of pretraining. How this is done best to balance the performance is probably one of the key research questions.
-	The implementation and training itself should be pretty straightforward as there are packages for many word embeddings available that I would use for this project.
-	
-	\section{Benchmark Model}
-	As a benchmark, I propose taking an existing trained word embedding. For all the mentioned word embeddings (Word2vec, GloVe, FastText) there exist extensively pretrained models for many languages in NLP Toolkits like spacy \cite{spacy2}, gensim \cite{rehurek_lrec} or NLTK \cite{Loper:2002:NNL:1118108.1118117} or GitHub (cf. Section \ref{web_resources}). For details on how to get from a word embedding to an evaluation metric, please refer to section \ref{eval} Evaluation Metrics.
-	
-	\section{Evaluation Metrics}
-	\label{eval}
-	To the best of my knowledge, there does not exist a single commonly used or agreed upon method on how to evaluate models\cite{1901.09785, Schnabel15, 1801.09536}. Instead a range of methods is used, these methods fall in two categories, extrinsic and intrinsic. Intrinsic evaluation takes into consideration only the embedding itself whereas extrinsic methods measure the embedding performance indirectly by a downstream NLP task with its own metric.
-	In this project I will use the following metrics:
-	\begin{itemize}
-		\item \textbf{$M_1$}: Extrinsic measure: A multiclass classification task of change requests for embedded control software will be used a an extrinsic metric. In particular, the Top 1 and Top 2 accuracy will be used to compare the word embeddings performance.\footnote{The classification task itself relies on proprietary text that cannot be published or submitted.}
-		
-		\item \textbf{$M_2$}: Clustering by subsystem. A vehicle is built from subsystems like engine, transmission, chassis, interior, etc. For a few different subsystems, we will each pick a list of words that belong to the subsystem. On this set of words, we can then perform clustering or classification. For word embeddings, we use the consine distance
-		\begin{equation}
-               d(\bold{a}, \bold{b})=\cos(\theta)=\frac{\bold{a} \cdot \bold{b}}{|\bold{a}|\cdot|\bold{b}|}
-		\end{equation}
-		
-		With this distance measure, we can do a KNN classification and will take the resulting classification accuracy as an intrinsic measure for the word embedding.  
-		
-		\item \textbf{$M_3$}: Word analogy. Another intrinsic metric for word embddings is to assess semantic meaning. We look for relations of the form
-	    $$ a:b::c:d $$
-	    In particular, we will assess the semantic representation of technical concepts. Two examples are 
-		$$\text{engine : engine control unit :: transmission : transmission control unit}$$
-		$$\text{camshaft : camshaft bearing :: crankshaft : crankshaft bearing}$$
-		
-		We can extract the word d from words a,b and c from the embedding simply with
-		\begin{equation}
-		d=\argmax_{i} \frac{(x_b -x_a + x_c)^T\cdot x_i}{|x_b-x_a+x_c|}
-		\end{equation}
-		
-
-	\item \textbf{$M_4$}: Word similarity. I will compile a list of pairs of words from technical jargon and ask colleagues to rate their similarity. This measure of similarity will then be compared to the cosine distance the embeddings produce for these word pairs. This metric can also be adopted to include relatedness instead of similarity.
-	
-	\item As a qualitative measure I intend to visualize the embedding using t-SNE \cite{vanDerMaaten2008} to get a comparative qualitative measure.
-\end{itemize}
-	
-My proposed evaluation is best summarized in an empty results table:
-	
-		\begin{center}
-			\begin{tabular}{|l| c| c| c|c|}
-				\hline
-				\textbf{Word Embedding} & $\boldsymbol{M_1}$ & $\boldsymbol{M_2}$ & $\boldsymbol{M_3}$ & $\boldsymbol{M_4}$\\ 
-				\hline
-				word2vec pretrained & \textbullet & \textbullet & \textbullet & \textbullet\\  \hline
-			    word2vec retrained & \textbullet & \textbullet & \textbullet & \textbullet\\  	\hline
-			    word2vec trained from scratch  & \textbullet & \textbullet & \textbullet & \textbullet\\  	\hline
-			    GloVe pretrained & \textbullet & \textbullet & \textbullet & \textbullet\\  
-			    \hline
-			    GloVe retrained & \textbullet & \textbullet & \textbullet & \textbullet\\
-			    \hline
-			    GloVe trained from scratch  & \textbullet & \textbullet & \textbullet & \textbullet\\  	
-			    \hline
-			    FastText pretrained & \textbullet & \textbullet & \textbullet & \textbullet\\  \hline
-			    FastText retrained & \textbullet & \textbullet & \textbullet & \textbullet\\  	\hline
-			    FastText trained from scratch  & \textbullet & \textbullet & \textbullet & \textbullet\\  	
-			    \hline
-			    
-				    
-			\end{tabular}
-		\end{center}
-		
-	where $M_i$ are the metrics as described above.
-	
-
-	\section{Additional Research Questions}
+      \end{tabular}	
+\end{center}
+	\subsection{Additional Research Questions}
+	Due to time contraints, I didn't touch the additional research questions I raised in the proposal. I still think it would be interesting to follow up on them. 
 	\paragraph{Extra Dimesions.} If we retrain a word embedding for a specialized subdomain, do we need to add a few dimensions to the vector space "to make room" for additional semantic concepts? Intuitition would suggest that all existing dimensions are already somehow occupied and new technical concepts would require "new space". So an additional question would be: Do extra dimesions improce the embedding quality? And if so, what semantic meaning can we assign the new dimensions? 
 	\paragraph{Compund Nouns.} A distinctive feature of the German language are compound nouns. This holds especially true for technical terms like Nockenwellenlagerungskonzept (cam shaft bearing method). I expect this to be of particular importance to be reflected in the embedding. 
 	
-	
-		
-	\section{Project Design}
-	The project design  seems pretty straightforward. The steps themselves and the whole process will most likely be highly iterative.
-	In a first step I will collect text for a particular specialized subdomain by collecting existing documents and scraping additional text off the internet. Where possible, I will try to leverage existing Python packages like pypatent etc. for the scraping
-	In a second step, I will preprocess the collected texts as described above. For this task, I will rely on existing NLP toolkits like NLTK or gensim.
-	In a third step I will use three popular word embeddings: word2vec, GloVe and FastText. These word embeddings will be used pretrained, trained from scratch and retrained. The results will be compared with the described evaluation metrics.	
-	
 
-\section{Web Resources}
+
+\section*{Web Resources}
 \label{web_resources}
 \begin{itemize}
 	\item \url{https://github.com/kudkudak/word-embeddings-benchmarks/blob/master/web/datasets/similarity.py}
