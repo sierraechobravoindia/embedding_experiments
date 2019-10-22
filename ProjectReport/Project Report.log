@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.17)  21 OCT 2019 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.17)  22 OCT 2019 08:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -325,45 +325,49 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
 
-Underfull \hbox (badness 3989) in paragraph at lines 39--40
+Underfull \hbox (badness 3989) in paragraph at lines 42--43
 []\OT1/cmr/m/n/10 done w/ Gen-Sim
  []
 
 
-Underfull \hbox (badness 1748) in paragraph at lines 41--42
+Underfull \hbox (badness 1748) in paragraph at lines 44--45
 []\OT1/cmr/m/n/10 n.a., needs global
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
 []\OT1/cmr/m/n/10 from Facebook-
  []
 
 
-Underfull \hbox (badness 3240) in paragraph at lines 43--44
+Underfull \hbox (badness 3240) in paragraph at lines 46--47
 []\OT1/cmr/m/n/10 done w/ un-doc-u-
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 43--44
+Underfull \hbox (badness 1436) in paragraph at lines 46--47
 \OT1/cmr/m/n/10 mented fea-ture in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 \OT1/cmr/m/n/10 Face-book im-ple-
  []
 
 
-Overfull \hbox (47.78268pt too wide) in paragraph at lines 35--49
+Overfull \hbox (47.78268pt too wide) in paragraph at lines 38--52
  [] 
  []
 
-<./Pictures/test.png, id=97, 804.00375pt x 538.01pt>
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<./Pictures/test.png, id=131, 804.00375pt x 538.01pt>
 File: ./Pictures/test.png Graphic file (type png)
 <use ./Pictures/test.png>
-Package pdftex.def Info: ./Pictures/test.png  used on input line 57.
+Package pdftex.def Info: ./Pictures/test.png  used on input line 77.
 (pdftex.def)             Requested size: 402.0009pt x 269.00433pt.
+
 
 ! LaTeX Error: \caption outside float.
 
@@ -371,67 +375,75 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 		\caption
+l.78 		\caption
                {Conic Section}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (57.0009pt too wide) in paragraph at lines 57--59
+Overfull \hbox (57.0009pt too wide) in paragraph at lines 77--79
  [] 
  []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./Pictures/test.png>] 
-[3]
+[2] [3 <./Pictures/test.png>] [4]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 128.
+d on input line 148.
 
-[4] [5]
-Overfull \hbox (32.74696pt too wide) in paragraph at lines 194--195
+[5] [6]
+Overfull \hbox (32.74696pt too wide) in paragraph at lines 214--215
 [][]$\OT1/cmtt/m/n/10 https : / / github . com / kudkudak / word-[]embeddings-[
 ]benchmarks / blob / master /
  []
 
-(./Project Report.bbl [6])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
+(./Project Report.bbl [7])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
  (./Project Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
-Package rerunfilecheck Info: File `"Project Report".out' has not changed.
-(rerunfilecheck)             Checksum: BC97241374721E6A9B99DA552C0252DC;1288.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 208.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
+
+
+Package rerunfilecheck Warning: File `"Project Report".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Project Report".out':
+(rerunfilecheck)             Before: 3F47F6C728D6D00530023A65DFA898CB;1541
+(rerunfilecheck)             After:  DBC3FCBF1A5DF8259CEFB5C9C3D8A6B0;1474.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
  ) 
 Here is how much of TeX's memory you used:
- 6154 strings out of 492982
- 88191 string characters out of 6134896
+ 6166 strings out of 492982
+ 88347 string characters out of 6134896
  173716 words of memory out of 5000000
- 9596 multiletter control sequences out of 15000+600000
- 14466 words of font info for 55 fonts, out of 8000000 for 9000
+ 9601 multiletter control sequences out of 15000+600000
+ 14634 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,12n,28p,555b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Project Report.pdf" (7 pages, 244802 bytes).
+pdfTeX warning (dest): name{subsection.3.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on "Project Report.pdf" (8 pages, 250202 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 190 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 277 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 222 words of extra memory for PDF output out of 10000 (max. 10000000)
 

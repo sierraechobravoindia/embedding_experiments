@@ -29,6 +29,9 @@
 		\item internal technical documentation: 17763 change requests for embedded control software with a total of 960921 words\footnote{proprietary, cannot be submitted} 
 		\item patents: 500 patents from the domain vehicle powertrain, containing a total of 9871 pages with a total of 3929993 words.
 	\end{itemize}
+    \subsection{Algorithms}
+    \subsection{Benchmark Models}
+    As a benchmark I chose the pretrained German Facebook FastText embedding. \footnote{\url{www.spiegel.de}}
 	\subsection{Related Work}
 	Overview over the word embeddings used:
 	\begin{center}
@@ -49,8 +52,25 @@
 	\end{center}
 	\section{Methodology}
 	\subsection{Data Preprocessing}
+	For 
 	\subsection{Implementation}
+	Training the embeddings
+	
 	\subsection{Optimization}
+	One problem seems to be overfitting to the small number of currently available labelled samples. The learning curves suggest this.
+	
+	To prevent overfitting, the following steps were taken:
+	\begin{itemize}
+		\item Early termination.
+		\item Dropout. 
+		\item Model Capacity. 
+	\end{itemize}
+    Other options that were not thoroughly explored in this project include
+	\begin{itemize}
+		\item Regularization.
+		\item Data augmentation
+		\item Acquisistion of more data.
+	\end{itemize}
 	\section{Results}
 	\subsection{Visualizations}
 	    \begin{center}
@@ -83,7 +103,7 @@
 		\end{tabular}
 	\end{center}
 	\section{Conclusion}
-	
+	\subsection{Reflection}
 	\subsection{Improvement/Future Work}
 	
 	
