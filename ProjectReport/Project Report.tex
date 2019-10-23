@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{cite}
+\usepackage[table]{xcolor}
 %\usepackage[style=nature, backend=biber]{biblatex}
 %\addbibresource{./bibfile.bib}
 \DeclareMathOperator*{\argmax}{argmax} % no space, limits underneath in displays
@@ -112,7 +113,7 @@
 	\end{center}
 \end{figure}
 
-    \paragraph{FastText} FastText builds on word2vec, but with one difference. FastText is built on character n-grams, whereas word2vec takes whole words as the smallest units. This property should give FastText an advantage with rare words and especially with German compound nouns.
+    \paragraph{FastText} FastText extends word2vec. It is built on character n-grams, whereas word2vec takes whole words as the smallest units. This property should give FastText an advantage with rare words and especially with German compound nouns.
     
     \paragraph{Evaluation Techniques}
     The techniques used to evaluate the are described in section \ref{eval}.
@@ -129,10 +130,10 @@
 	\subsection{Data Preprocessing}
 	For the preprocessing, the following steps were taken:
 	\begin{itemize}
-		\item Scraping war text from pdf. This is done with the Python packages "textract" and "PyPDF2". Used on the patents and the books, the CRQs were scraped directly to raw text via SQL from a database.
+		\item Scraping raw text from pdf. This is done with the Python packages "textract" and "PyPDF2". Used on the patents and the books, the CRQs were scraped directly to raw text via SQL from a database.
 		\item The structure of the data is a list of lists, the inner lists being the scope over which the windows run while training.
 		\item The raw text is serialzied to disk using pickle.
-		\item The raw text is stripped of punctuation, numerics, multiple whitespace, words shorter than 3 letters, and German stop words. It is lower-cased and split. A lemmatizer was integrated but not used due to runtime considerations. The lsit of German stop words was imported from the python package "get\_stop\_words", the preporcessing was mainly done with the package "gensim" preprocessing functions.
+		\item The raw text is stripped of punctuation, numerics, multiple whitespace, words shorter than 3 letters, and German stop words. It is lower-cased and split. A lemmatizer was integrated but not used due to runtime considerations. The list of German stop words was imported from the python package "get\_stop\_words", the preporcessing was mainly done with the package "gensim" preprocessing functions.
 		\item The preprocessed text is serialized to disk using pickle,
 	\end{itemize}
     The scraping and preprocessing is implemented in the notebook "Data Collection.ipynb". 
@@ -269,6 +270,7 @@
 \end{figure}
 
 \subsection{Quantitative Results}
+\label{quant}
 	The metrics \textbf{$M_1$}--\textbf{$M_4$} produce qunatitavie results that are summarized in the following table 
 	
 	\begin{center}
@@ -289,21 +291,20 @@
 	\end{center}
 
 
-Before we discuss the results of the metrics, a caveat is in order: The choice of subsystems and subsystem representatives in M$_2$, the choice of word analogies in M$_3$ and the design and assessment of the word similarity list would not hold up to any scientific standards. In particular the sample size of all metrics is to small to deliver robust results. Hence the interpretation and discussion of the results is highly speculative.
+Before we discuss the results of the metrics, a caveat is in order: The choice of subsystems and subsystem representatives in M$_2$, the choice of word analogies in M$_3$ and the design and assessment of the word similarity list in  M$_4$ would not hold up to any scientific standards. In particular the sample size of all metrics is to small to deliver robust results. Hence the interpretation and discussion of the results is highly speculative.
 
 \paragraph{$\boldsymbol{M_1}$ Downstream Classification}
 
-The results show that the specifically trained word embeddings perform better in this downstream application of the embeddings. On might seem surprinsing, because the generic model is trained on a data corpus 3-4 orders of magnitude larger than the domain-specific one used here to train the models. On the other hand, the task needs domain specific knowledge, so a specifically trained model might have an advantage. 
-I would like to point out that I did not put much effort in optimizing the architecture, loss function or learning of the classifier. The overall performance for all embeddings could probably dramatically be improved upon (see also section \ref{opt_class}). All that is relevant in this context are the relative performances of the different embeddings.
+The results show that the specifically trained word embeddings perform better in this downstream application. This might seem surprinsing, because the generic model is trained on a data corpus 3-4 orders of magnitude larger than the domain specific data corpus used to train the domain specific models. On the other hand, the task needs domain specific knowledge, so a specifically trained model might have an advantage. 
+I would like to point out that I did not put much effort in optimizing the architecture, loss function or learning of the classifier. The overall performance for all embeddings could probably be improved significantly (see also section \ref{opt_class}). However, all that is relevant in this context are the relative performances of the different embeddings.
 
-\paragraph{$\boldsymbol{M_2}$ Subsystem Classification in Embedding Space} The results suggest that the embeddings trained on domain specific data can separate the subsystems of the vehicle quite well, whereas the generic model performs significantly worse in this regard. FastText might have an edge over word2vec due to it's property of using character n-grams as the smallest entity, whereas word2vec only hat complete words as entity. This might help to correctly classify compund nouns. 
+\paragraph{$\boldsymbol{M_2}$ Subsystem Classification in Embedding Space} The results suggest that the embeddings trained on domain specific data can separate the subsystems of the vehicle quite well, whereas the generic model performs significantly worse in this regard. FastText might have an edge over word2vec due to it's property of using character n-grams as the smallest entity, whereas word2vec has complete words as entity. This might help to correctly classify compund nouns. 
 
 \paragraph{$\boldsymbol{M_3}$ Word Analogy}
-6 analogies with automotive specific meaning were randomly picked. A point is given for every correctly found analogy in the top-10. Both specifically trained embeddings get one analogy right, whereas the generic embedding does not produce any analogy. The word2vec produces the analogy with Top-1 and Top-2 whereas the fasttext embedding gets it with Top-5 only.
+6 analogies with automotive specific meaning were randomly picked. A point is given for every correctly found analogy in the top-10. Both specifically trained embeddings get one analogy right, whereas the generic embedding does not reproduce any analogy. The word2vec produces the analogy with Top-1 and Top-2 whereas the fasttext embedding gets it with Top-5 only.
 
-\paragraph{$\boldsymbol{M_4}$ Word Similarity} Before we discuss the results of this measure, a caveat is in order: The process to aqcuire and score the list of word pairs would not hold up to any scientific standard whatsoever, so every interpretation of the results is speculative. Plus the number of word pairs used is tiny, from the originally planned 60 only 16 were used, as the others are not in all embeddings (especially the generic FastText). 
-The similarity measure used is a \textsc{Pearson}.coefficient between the human similarity score and the cosine similarity of the embedding. 
-The results would suggest, that only the domain specific embeddings capture the similarities, whereas the generic model does not represent any domain specific semantics. This result is to be expected, but would have to be shown in a more rigorous manner.  
+\paragraph{$\boldsymbol{M_4}$ Word Similarity} The similarity measure used is a \textsc{Pearson}-coefficient between the human similarity score and the cosine similarity of the embedding. 
+The results would suggest, that only the domain specific embeddings capture the similarities, whereas the generic model does not represent any domain specific semantics. This result is to be expected, but would have to be proven in a more rigorous manner.  
 
 
 
@@ -312,27 +313,26 @@ The results would suggest, that only the domain specific embeddings capture the 
 	
 By all metrics employed, the generic Facebook FastText model performed worse than the domain specific models. This is remarkable, because the data corpus used to train the generic embedding	is of the size 10s to 100s of billion words, whereas we trained the domain specific embeddings on a corpus of a little more than 10 million words, three to four orders of magnitude smaller.
 	
-	\subsection{Reflection}
-	
-	First of all, I 
-	
 	\subsection{Improvement/Future Work}
-	Here I will mainly mention the program that I laid out in the proposal and did not yet finish. Plus I draw conclusions from the findings.
-		Overview over the word embeddings used:
+	There is much work to be done. From the 9 embeddings I set out to cover, I have implemented 3 (colored in the following table)
+
 	\begin{center}
 		\begin{tabular}{|l|p{3cm}| p{3cm}| p{3cm}|}
 			\hline
 			\textbf{Word Embedding} & pretrained & trained & retrained \\ 
 			\hline
-			word2vec  & GenSim Standard & w/ GenSim Implementation & done w/ GenSim implementation \\  
+			word2vec  & gensim Standard & \cellcolor{blue!25} gensim Implementation & done w/ gensim implementation \\  
 			\hline
-			GloVe & GenSim Standard &w/ GenSim implementation & n.a., needs global cooccurence matrix \\  
+			GloVe & gensim Standard &w/ gensim implementation & n.a., needs global cooccurence matrix \\  
 			\hline
-			FastText & from Facebook-Page,  & w/ Facebook implementation & done w/ undocumented feature in Facebook implementation\\
+			FastText & \cellcolor{blue!25 }from Facebook  &\cellcolor{blue!25 } gensim implementation & done w/ undocumented feature in Facebook implementation ???\\
 			\hline
       \end{tabular}	
 \end{center}
-	\subsection{Additional Research Questions}
+
+The metrics implemented should in general be valid,  however all 5 would need refinement as already mentionend in the caveat in section \ref{quant} to deliver statistically significant results.
+
+	\subsection {Additional Research Questions}
 	Due to time contraints, I didn't touch the additional research questions I raised in the proposal. I still think it would be interesting to follow up on them. 
 	\paragraph{Extra Dimesions.} If we retrain a word embedding for a specialized subdomain, do we need to add a few dimensions to the vector space "to make room" for additional semantic concepts? Intuitition would suggest that all existing dimensions are already somehow occupied and new technical concepts would require "new space". So an additional question would be: Do extra dimesions improce the embedding quality? And if so, what semantic meaning can we assign the new dimensions? 
 	\paragraph{Compund Nouns.} A distinctive feature of the German language are compound nouns. This holds especially true for technical terms like Nockenwellenlagerungskonzept (cam shaft bearing method). I expect this to be of particular importance to be reflected in the embedding. 

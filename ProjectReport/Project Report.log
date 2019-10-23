@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.17)  23 OCT 2019 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.17)  23 OCT 2019 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -240,25 +240,59 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (./Project Report.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen118
+\extrarowheight=\dimen119
+\NC@list=\toks22
+\extratabsurround=\skip47
+\backup@length=\skip48
+)
+\everycr=\toks23
+\minrowclearance=\skip49
+)
+\rownum=\count109
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(./Project Report.aux)
 \openout1 = `"Project Report.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 \AtBeginShipoutBox=\box28
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 14.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -266,11 +300,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count109
+\c@section@level=\count110
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 14.
+LaTeX Info: Redefining \pageref on input line 14.
+LaTeX Info: Redefining \nameref on input line 14.
 
 (./Project Report.out) (./Project Report.out)
 \@outlinefile=\write3
@@ -279,17 +313,17 @@ LaTeX Info: Redefining \nameref on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen118
+\scratchcounter=\count111
+\scratchdimen=\dimen120
 \scratchbox=\box29
-\nofMPsegments=\count111
-\nofMParguments=\count112
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen119
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
-\everyMPtoPDFconversion=\toks23
+\nofMPsegments=\count112
+\nofMParguments=\count113
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count114
+\MPscratchDim=\dimen121
+\MPnumerator=\count115
+\makeMPintoPDFobject=\count116
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -307,12 +341,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -324,151 +358,162 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
  [2]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 48.
+d on input line 49.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 [][][]\OT1/cmr/m/n/8 https://towardsdatascience.com/an-implementation-guide-to-
 word2vec-using-numpy-
  []
 
 
-Overfull \hbox (43.05554pt too wide) in paragraph at lines 95--95
+Overfull \hbox (43.05554pt too wide) in paragraph at lines 96--96
 [][][][]$\OT1/cmtt/m/n/8 https : / / towardsdatascience . com / introduction-[]
 to-[]word-[]embedding-[]and-[]word2vec-[]652d0c2060fa$[]| 
  []
 
-<./Pictures/w2v_pic.png, id=157, 1630.09pt x 616.3025pt>
+<./Pictures/w2v_pic.png, id=152, 1630.09pt x 616.3025pt>
 File: ./Pictures/w2v_pic.png Graphic file (type png)
 <use ./Pictures/w2v_pic.png>
-Package pdftex.def Info: ./Pictures/w2v_pic.png  used on input line 99.
+Package pdftex.def Info: ./Pictures/w2v_pic.png  used on input line 100.
 (pdftex.def)             Requested size: 407.5215pt x 154.07524pt.
 
-Overfull \hbox (62.5215pt too wide) in paragraph at lines 99--100
+Overfull \hbox (62.5215pt too wide) in paragraph at lines 100--101
  [] 
  []
 
-<./Pictures/w2v_arch.png, id=158, 598.235pt x 577.15625pt>
+<./Pictures/w2v_arch.png, id=153, 598.235pt x 577.15625pt>
 File: ./Pictures/w2v_arch.png Graphic file (type png)
 <use ./Pictures/w2v_arch.png>
-Package pdftex.def Info: ./Pictures/w2v_arch.png  used on input line 108.
+Package pdftex.def Info: ./Pictures/w2v_arch.png  used on input line 109.
 (pdftex.def)             Requested size: 239.28975pt x 230.8584pt.
+
+Overfull \hbox (3.5826pt too wide) in paragraph at lines 116--117
+ []\OT1/cmr/bx/n/10 FastText[] \OT1/cmr/m/n/10 Fast-Text ex-tends word2vec. It 
+is built on char-ac-ter n-grams, whereas
+ []
+
 [4] [5 <./Pictures/w2v_pic.png (PNG copy)> <./Pictures/w2v_arch.png (PNG copy)>
 ]
-Overfull \hbox (11.99689pt too wide) in paragraph at lines 147--147
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 148--148
 []\OT1/cmtt/m/n/10 model_w2v = Word2Vec(training_data, size=300, window=5, min_
 count=5)[] 
  []
 
 
-Overfull \hbox (6.74693pt too wide) in paragraph at lines 147--147
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 148--148
 []\OT1/cmtt/m/n/10 model_ft = FastText(training_data, size=300, window=5, min_c
 ount=5)[] 
  []
 
 [6]
-<./Pictures/m_acc_ds_ft.png, id=196, 508.90125pt x 497.86pt>
+<./Pictures/m_acc_ds_ft.png, id=191, 508.90125pt x 497.86pt>
 File: ./Pictures/m_acc_ds_ft.png Graphic file (type png)
 <use ./Pictures/m_acc_ds_ft.png>
-Package pdftex.def Info: ./Pictures/m_acc_ds_ft.png  used on input line 181.
+Package pdftex.def Info: ./Pictures/m_acc_ds_ft.png  used on input line 182.
 (pdftex.def)             Requested size: 203.55688pt x 199.14047pt.
-<./Pictures/loss_ds_ft.png, id=198, 502.87875pt x 497.86pt>
+<./Pictures/loss_ds_ft.png, id=193, 502.87875pt x 497.86pt>
 File: ./Pictures/loss_ds_ft.png Graphic file (type png)
 <use ./Pictures/loss_ds_ft.png>
-Package pdftex.def Info: ./Pictures/loss_ds_ft.png  used on input line 190.
+Package pdftex.def Info: ./Pictures/loss_ds_ft.png  used on input line 191.
 (pdftex.def)             Requested size: 201.14793pt x 199.14047pt.
  [7] [8 <./Pictures/m_acc_ds_ft.png> <./Pictures/loss_ds_ft.png>]
-<./Pictures/model_ft_benzin_diesel.png, id=216, 732.7375pt x 538.01pt>
+<./Pictures/model_ft_benzin_diesel.png, id=211, 732.7375pt x 538.01pt>
 File: ./Pictures/model_ft_benzin_diesel.png Graphic file (type png)
 <use ./Pictures/model_ft_benzin_diesel.png>
 Package pdftex.def Info: ./Pictures/model_ft_benzin_diesel.png  used on input l
-ine 224.
+ine 225.
 (pdftex.def)             Requested size: 293.08981pt x 215.20018pt.
-<./Pictures/model_ds_ft_benzin_diesel.png, id=217, 731.73375pt x 538.01pt>
+<./Pictures/model_ds_ft_benzin_diesel.png, id=212, 731.73375pt x 538.01pt>
 File: ./Pictures/model_ds_ft_benzin_diesel.png Graphic file (type png)
 <use ./Pictures/model_ds_ft_benzin_diesel.png>
 Package pdftex.def Info: ./Pictures/model_ds_ft_benzin_diesel.png  used on inpu
-t line 232.
+t line 233.
 (pdftex.def)             Requested size: 292.68831pt x 215.20018pt.
-<./Pictures/model_ds_w2v_benzin_diesel.png, id=218, 730.73pt x 538.01pt>
+<./Pictures/model_ds_w2v_benzin_diesel.png, id=213, 730.73pt x 538.01pt>
 File: ./Pictures/model_ds_w2v_benzin_diesel.png Graphic file (type png)
 <use ./Pictures/model_ds_w2v_benzin_diesel.png>
 Package pdftex.def Info: ./Pictures/model_ds_w2v_benzin_diesel.png  used on inp
-ut line 241.
+ut line 242.
 (pdftex.def)             Requested size: 292.28682pt x 215.20018pt.
-<./Pictures/model_ft_motor_getriebe.png, id=219, 723.70375pt x 538.01pt>
+<./Pictures/model_ft_motor_getriebe.png, id=214, 723.70375pt x 538.01pt>
 File: ./Pictures/model_ft_motor_getriebe.png Graphic file (type png)
 <use ./Pictures/model_ft_motor_getriebe.png>
 Package pdftex.def Info: ./Pictures/model_ft_motor_getriebe.png  used on input 
-line 248.
+line 249.
 (pdftex.def)             Requested size: 289.47636pt x 215.20018pt.
-<./Pictures/model_ds_ft_motor_getriebe.png, id=220, 756.8275pt x 538.01pt>
+<./Pictures/model_ds_ft_motor_getriebe.png, id=215, 756.8275pt x 538.01pt>
 File: ./Pictures/model_ds_ft_motor_getriebe.png Graphic file (type png)
 <use ./Pictures/model_ds_ft_motor_getriebe.png>
 Package pdftex.def Info: ./Pictures/model_ds_ft_motor_getriebe.png  used on inp
-ut line 256.
+ut line 257.
 (pdftex.def)             Requested size: 302.72563pt x 215.20018pt.
-<./Pictures/model_ds_w2v_motor_getriebe.png, id=221, 730.73pt x 538.01pt>
+<./Pictures/model_ds_w2v_motor_getriebe.png, id=216, 730.73pt x 538.01pt>
 File: ./Pictures/model_ds_w2v_motor_getriebe.png Graphic file (type png)
 <use ./Pictures/model_ds_w2v_motor_getriebe.png>
 Package pdftex.def Info: ./Pictures/model_ds_w2v_motor_getriebe.png  used on in
-put line 266.
+put line 267.
 (pdftex.def)             Requested size: 292.28682pt x 215.20018pt.
 
-Overfull \hbox (48.57797pt too wide) in paragraph at lines 275--289
+Overfull \hbox (50.97792pt too wide) in paragraph at lines 277--291
  [] 
  []
 
 [9 <./Pictures/model_ft_benzin_diesel.png>] [10 <./Pictures/model_ds_ft_benzin_
 diesel.png> <./Pictures/model_ds_w2v_benzin_diesel.png>] [11 <./Pictures/model_
 ft_motor_getriebe.png> <./Pictures/model_ds_ft_motor_getriebe.png>]
-Overfull \hbox (7.05846pt too wide) in paragraph at lines 296--298
+Overfull \hbox (7.05846pt too wide) in paragraph at lines 298--300
  []$[]$ \OT1/cmr/bx/n/10 Down-stream Clas-si-fi-ca-tion[] \OT1/cmr/m/n/10 The r
 e-sults show that the specif-i-cally trained
  []
 
 [12 <./Pictures/model_ds_w2v_motor_getriebe.png>]
-Underfull \hbox (badness 3989) in paragraph at lines 327--328
-[]\OT1/cmr/m/n/10 done w/ Gen-Sim
+Underfull \hbox (badness 3746) in paragraph at lines 324--324
+[]|\OT1/cmr/m/n/10 gensim Im-ple-men-
  []
 
 
-Underfull \hbox (badness 1748) in paragraph at lines 329--330
-[]\OT1/cmr/m/n/10 n.a., needs global
+Underfull \hbox (badness 2088) in paragraph at lines 326--326
+[]|\OT1/cmr/m/n/10 w/ gen-sim im-ple-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
-[]\OT1/cmr/m/n/10 from Facebook-
+Underfull \hbox (badness 1748) in paragraph at lines 326--327
+[]|\OT1/cmr/m/n/10 n.a., needs global
  []
 
 
-Underfull \hbox (badness 3240) in paragraph at lines 331--332
-[]\OT1/cmr/m/n/10 done w/ un-doc-u-
+Underfull \hbox (badness 5681) in paragraph at lines 328--328
+[]|\OT1/cmr/m/n/10 gensim im-ple-men-
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 331--332
+Underfull \hbox (badness 3240) in paragraph at lines 328--329
+[]|\OT1/cmr/m/n/10 done w/ un-doc-u-
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 328--329
 \OT1/cmr/m/n/10 mented fea-ture in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 \OT1/cmr/m/n/10 Face-book im-ple-
  []
 
 
-Overfull \hbox (47.78268pt too wide) in paragraph at lines 323--334
+Overfull \hbox (49.78264pt too wide) in paragraph at lines 320--331
  [] 
  []
 
@@ -486,17 +531,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 359.
 Package rerunfilecheck Info: File `"Project Report".out' has not changed.
-(rerunfilecheck)             Checksum: 067CA234BCA2D1A94FE49BE36FFA20BB;1220.
+(rerunfilecheck)             Checksum: 31F7EE78BF1AB5D8149EC9E852B81CFE;1160.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 359.
  ) 
 Here is how much of TeX's memory you used:
- 6248 strings out of 492982
- 90333 string characters out of 6134896
- 173267 words of memory out of 5000000
- 9644 multiletter control sequences out of 15000+600000
+ 6781 strings out of 492982
+ 96531 string characters out of 6134896
+ 185756 words of memory out of 5000000
+ 10165 multiletter control sequences out of 15000+600000
  15556 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,12n,28p,779b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,13n,35p,779b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
@@ -513,10 +558,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "Project Report.pdf" (15 pages, 660080 bytes).
+Output written on "Project Report.pdf" (15 pages, 659595 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 303 compressed objects within 4 object streams
- 81 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 299 compressed objects within 3 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 

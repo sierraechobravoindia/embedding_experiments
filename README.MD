@@ -12,6 +12,15 @@ The data corpus for this project is built from 3 different sources (language Ger
 
 To use this code, other data corpora can be used, either pdf or plain text. The preprocessing pipeline requires a list of list of strings input format, the multiclass classification metric a labelled dataset of text, the other metrics operate directly on embeddings. 
 
+## Prerequisites
+
+The main packages required are: 
+
+numpy, pandas, sklearn, keras tensorflow, gensim, spacy, nltk, textract, PyPDF2, get_stop_words, pickle
+
+The generic German FastText model can be downloaded at https://fasttext.cc/docs/en/crawl-vectors.html
+
+
 
 ## Running the code
 
