@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{cite}
+\usepackage{subcaption}
 \usepackage[table]{xcolor}
 %\usepackage[style=nature, backend=biber]{biblatex}
 %\addbibresource{./bibfile.bib}
@@ -81,6 +82,37 @@
 		\item internal technical documentation: 17763 change requests for embedded control software with a total of 960921 words\footnote{proprietary, cannot be submitted} 
 		\item patents: 500 patents from the domain vehicle powertrain, containing a total of 9871 pages with a total of 3929993 words.
 	\end{itemize}
+	
+	A sample change request after preprocessing looks like this:
+	\begin{verbatim}
+	['zustart', 'verbrenners', 'riemenstartergenerator', 'rsg', 'verfügung',
+	'steht', 'maschine', 'reduzierte', 'momentenreserve', 'vorgehalten', 
+	'problem', 'fällt', 'zustart', 'verfügbarkeit', 'rsgs', 'erhöhte',
+	'drehmomentreserve', 'sprunghaft', 'fahrerwunschmoment', 'einkoordiniert',
+	'fahrer', 'spürt', 'ruck', 'fahrerwunschmoment', 'fahren', 'zustart', 
+	'größe', 'disttqlimelm', 'tqmaxeldrv', 'begrenzt', 'disttqlimelm', 
+	'tqmaxeldrv', 'enthält', 'aktuell', 'momentenreserve', 'covom', 'tqresvstat',
+	'covom', 'tqresvstat', 'zeigt', 'wegfall', 'verfügbarkeit', 'rsgs', 
+	'erhöhten', 'bedarf', 'momentenreserve', 'sprunghaft', 'fällt', 'zustart',
+	'verfügbarkeit', 'rsgs', 'darf', 'erhöhte', 'drehmomentenreserve',
+	'fahrerwunsch', 'begrenzen', 'ablaufsteuerung', 'signal', 'covom',
+	'tqresvstrt', 'berücksichtigt', 'begrenzung', 'fahrerwunsches', 'maximal',
+	'verfügbare', 'fahrmoment', 'signal', 'verwendet', 'aktuell', 'gültige',
+	'momentenreserve', 'covom', 'tqresvstrt', 'enthält']
+	\end{verbatim}
+	
+	The preprocessed data corpus contains 27801 texts with a total of 7177448 words.
+	The maximum length of a text is 312768, the minimum length is 0, the mean length is 258.2 words. A histogram of the text length ist plotted in figure \ref{hist}. It shows that rather short texts dominate the dataset, the longest text being an abnormality. This distribution reflects the design of the data corpus from a large number of (short) change request texts mixed with a few hundred (medium length) patents and 60 (long) books.  
+	
+	
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.6]{./Pictures/hist_length.png}
+			
+			\caption{Histogram of the text length after preprocessing}
+			\label{hist}
+		\end{center}
+	\end{figure}
 	
 	This data corpus would in principle be easy to scale up by at least two orders of magnitede. As a company, we have access to electronic versions of books from almost all major publishers in the field. Furthermore we have electronic access to the major journals in the field. The patent database is public and with a paid account we can access an unlimited number of documents. The internally available data is of course limited, however only a fraction of the available data was used in this project.      
 	 
@@ -312,7 +344,39 @@ The results would suggest, that only the domain specific embeddings capture the 
 \section{Conclusion}
 	
 By all metrics employed, the generic Facebook FastText model performed worse than the domain specific models. This is remarkable, because the data corpus used to train the generic embedding	is of the size 10s to 100s of billion words, whereas we trained the domain specific embeddings on a corpus of a little more than 10 million words, three to four orders of magnitude smaller.
-	
+
+This is maybe visualized best by comparing the t-SNE embeddings for two groups of words belonging to the subsystem "motor" and "getriebe" respectively, see figure \ref{comp}. The domain specific FastText clearly and cleanly separates these two groups of words, whereas the Generic FastText does not. This is an indication that the domain specific model captures domain specific meaning better than the generic model, even though the data corpus it is trained on is tiny compared to the generic model. 
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{./Pictures/model_ft_motor_getriebe.png}
+		\caption{Generic FastText}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{./Pictures/model_ds_ft_motor_getriebe.png}
+		\caption{Domain Specific FastText}
+	\end{subfigure}
+    
+	\caption{Side-by-side comparison of t-SNE of nearest neighbors of "motor" and "getriebe" ("engine" and "transmission")}
+    \label{comp}
+\end{figure}
+
+
+
+	\subsection{Reflection}
+	In this project I trained word embeddings and compared them to available pretrained embeddings with 5 different metrics. To achive this, I went through the following steps:
+	\begin{enumerate}
+		\item Data Collection: I collected technical text data for the subdomain of automotive engineering and converted it to raw text.
+		\item Data Preprocessing: The raw text data was preprocessed by removing punctuation, nunmerics, redundant whitespace, short words and stop words. It is lowercased and split in single words. 
+		\item Embedding Training: I trained two different word embeddings on this data corpus, word2vec and FastText
+		\item Evaluation: I evaluated these two embeddings against the current FastText German pretrained model with 5 different metrics, including multiclass text classification, visualization with t-SNE and 3 other intrinsic metrics based on word similarity, analogy and subsystem clustering. 
+	\end{enumerate}
+
+One somewhat surprising difficulty was the support for the German language: Even though it is currently the third most used language for internet content, the suport for German in NLP toolkits and embeddings is not nearly as good as for English: Lists of Stopwords have to be imported from additional sources, lemmatizers are hard to find, pretrained models are not readily and abundantly available.  
+
 	\subsection{Improvement/Future Work}
 	There is much work to be done. From the 9 embeddings I set out to cover, I have implemented 3 (colored in the following table)
 

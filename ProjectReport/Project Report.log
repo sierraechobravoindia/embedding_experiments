@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.17)  23 OCT 2019 17:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.17)  23 OCT 2019 22:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -241,6 +241,29 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+\c@ContinuedFloat=\count109
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count110
+\c@subtable=\count111
+)
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -254,8 +277,8 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen118
-\extrarowheight=\dimen119
+\col@sep=\dimen125
+\extrarowheight=\dimen126
 \NC@list=\toks22
 \extratabsurround=\skip47
 \backup@length=\skip48
@@ -263,7 +286,7 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \everycr=\toks23
 \minrowclearance=\skip49
 )
-\rownum=\count109
+\rownum=\count112
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -277,22 +300,22 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (./Project Report.aux)
 \openout1 = `"Project Report.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 \AtBeginShipoutBox=\box28
-Package hyperref Info: Link coloring OFF on input line 14.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -300,11 +323,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count110
+\c@section@level=\count113
 )
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 (./Project Report.out) (./Project Report.out)
 \@outlinefile=\write3
@@ -313,16 +336,16 @@ LaTeX Info: Redefining \nameref on input line 14.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen120
+\scratchcounter=\count114
+\scratchdimen=\dimen127
 \scratchbox=\box29
-\nofMPsegments=\count112
-\nofMParguments=\count113
+\nofMPsegments=\count115
+\nofMParguments=\count116
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen121
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen128
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
 \everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -341,12 +364,14 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 18.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 18.
+LaTeX Font Info:    Try loading font information for U+msb on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -358,190 +383,290 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
  [2]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 49.
+d on input line 50.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 ['zustart', 'verbrenners', 'riemenstartergenerator', 'rsg', 
+'verf^^?ugung',[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'steht', 'maschine', 'reduzierte', 'momentenreserve', 'vorge
+halten',[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'problem', 'f^^?allt', 'zustart', 'verf^^?ugbarkeit', 'rsgs'
+, 'erh^^?ohte',[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'drehmomentreserve', 'sprunghaft', 'fahrerwunschmoment', 'ei
+nkoordiniert',[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'fahrer', 'sp^^?urt', 'ruck', 'fahrerwunschmoment', 'fahren'
+, 'zustart',[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'gr^^?o^^Ye', 'disttqlimelm', 'tqmaxeldrv', 'begrenzt', 'dis
+ttqlimelm',[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'tqmaxeldrv', 'enth^^?alt', 'aktuell', 'momentenreserve', 'c
+ovom', 'tqresvstat',[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'covom', 'tqresvstat', 'zeigt', 'wegfall', 'verf^^?ugbarkeit
+', 'rsgs',[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'erh^^?ohten', 'bedarf', 'momentenreserve', 'sprunghaft', 'f
+^^?allt', 'zustart',[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'verf^^?ugbarkeit', 'rsgs', 'darf', 'erh^^?ohte', 'drehmomen
+tenreserve',[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'fahrerwunsch', 'begrenzen', 'ablaufsteuerung', 'signal', 'c
+ovom',[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'tqresvstrt', 'ber^^?ucksichtigt', 'begrenzung', 'fahrerwuns
+ches', 'maximal',[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 102--102
+[]\OT1/cmtt/m/n/10 'verf^^?ugbare', 'fahrmoment', 'signal', 'verwendet', 'aktue
+ll', 'g^^?ultige',[] 
+ []
+
+<./Pictures/hist_length.png, id=153, 379.4175pt x 264.99pt>
+File: ./Pictures/hist_length.png Graphic file (type png)
+<use ./Pictures/hist_length.png>
+Package pdftex.def Info: ./Pictures/hist_length.png  used on input line 110.
+(pdftex.def)             Requested size: 227.65225pt x 158.99522pt.
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
 [][][]\OT1/cmr/m/n/8 https://towardsdatascience.com/an-implementation-guide-to-
 word2vec-using-numpy-
  []
 
 
-Overfull \hbox (43.05554pt too wide) in paragraph at lines 96--96
+Overfull \hbox (43.05554pt too wide) in paragraph at lines 128--128
 [][][][]$\OT1/cmtt/m/n/8 https : / / towardsdatascience . com / introduction-[]
 to-[]word-[]embedding-[]and-[]word2vec-[]652d0c2060fa$[]| 
  []
 
-<./Pictures/w2v_pic.png, id=152, 1630.09pt x 616.3025pt>
+<./Pictures/w2v_pic.png, id=168, 1630.09pt x 616.3025pt>
 File: ./Pictures/w2v_pic.png Graphic file (type png)
 <use ./Pictures/w2v_pic.png>
-Package pdftex.def Info: ./Pictures/w2v_pic.png  used on input line 100.
+Package pdftex.def Info: ./Pictures/w2v_pic.png  used on input line 132.
 (pdftex.def)             Requested size: 407.5215pt x 154.07524pt.
 
-Overfull \hbox (62.5215pt too wide) in paragraph at lines 100--101
+Overfull \hbox (62.5215pt too wide) in paragraph at lines 132--133
  [] 
  []
 
-<./Pictures/w2v_arch.png, id=153, 598.235pt x 577.15625pt>
+<./Pictures/w2v_arch.png, id=169, 598.235pt x 577.15625pt>
 File: ./Pictures/w2v_arch.png Graphic file (type png)
 <use ./Pictures/w2v_arch.png>
-Package pdftex.def Info: ./Pictures/w2v_arch.png  used on input line 109.
+Package pdftex.def Info: ./Pictures/w2v_arch.png  used on input line 141.
 (pdftex.def)             Requested size: 239.28975pt x 230.8584pt.
 
-Overfull \hbox (3.5826pt too wide) in paragraph at lines 116--117
+Overfull \hbox (3.5826pt too wide) in paragraph at lines 148--149
  []\OT1/cmr/bx/n/10 FastText[] \OT1/cmr/m/n/10 Fast-Text ex-tends word2vec. It 
 is built on char-ac-ter n-grams, whereas
  []
 
-[4] [5 <./Pictures/w2v_pic.png (PNG copy)> <./Pictures/w2v_arch.png (PNG copy)>
-]
-Overfull \hbox (11.99689pt too wide) in paragraph at lines 148--148
+[5 <./Pictures/hist_length.png>] [6 <./Pictures/w2v_pic.png (PNG copy)> <./Pict
+ures/w2v_arch.png (PNG copy)>]
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 180--180
 []\OT1/cmtt/m/n/10 model_w2v = Word2Vec(training_data, size=300, window=5, min_
 count=5)[] 
  []
 
 
-Overfull \hbox (6.74693pt too wide) in paragraph at lines 148--148
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 180--180
 []\OT1/cmtt/m/n/10 model_ft = FastText(training_data, size=300, window=5, min_c
 ount=5)[] 
  []
 
-[6]
-<./Pictures/m_acc_ds_ft.png, id=191, 508.90125pt x 497.86pt>
+[7]
+<./Pictures/m_acc_ds_ft.png, id=206, 508.90125pt x 497.86pt>
 File: ./Pictures/m_acc_ds_ft.png Graphic file (type png)
 <use ./Pictures/m_acc_ds_ft.png>
-Package pdftex.def Info: ./Pictures/m_acc_ds_ft.png  used on input line 182.
+Package pdftex.def Info: ./Pictures/m_acc_ds_ft.png  used on input line 214.
 (pdftex.def)             Requested size: 203.55688pt x 199.14047pt.
-<./Pictures/loss_ds_ft.png, id=193, 502.87875pt x 497.86pt>
+<./Pictures/loss_ds_ft.png, id=207, 502.87875pt x 497.86pt>
 File: ./Pictures/loss_ds_ft.png Graphic file (type png)
 <use ./Pictures/loss_ds_ft.png>
-Package pdftex.def Info: ./Pictures/loss_ds_ft.png  used on input line 191.
+Package pdftex.def Info: ./Pictures/loss_ds_ft.png  used on input line 223.
 (pdftex.def)             Requested size: 201.14793pt x 199.14047pt.
- [7] [8 <./Pictures/m_acc_ds_ft.png> <./Pictures/loss_ds_ft.png>]
-<./Pictures/model_ft_benzin_diesel.png, id=211, 732.7375pt x 538.01pt>
+ [8] [9 <./Pictures/m_acc_ds_ft.png> <./Pictures/loss_ds_ft.png>]
+<./Pictures/model_ft_benzin_diesel.png, id=224, 732.7375pt x 538.01pt>
 File: ./Pictures/model_ft_benzin_diesel.png Graphic file (type png)
 <use ./Pictures/model_ft_benzin_diesel.png>
 Package pdftex.def Info: ./Pictures/model_ft_benzin_diesel.png  used on input l
-ine 225.
+ine 257.
 (pdftex.def)             Requested size: 293.08981pt x 215.20018pt.
-<./Pictures/model_ds_ft_benzin_diesel.png, id=212, 731.73375pt x 538.01pt>
+<./Pictures/model_ds_ft_benzin_diesel.png, id=225, 731.73375pt x 538.01pt>
 File: ./Pictures/model_ds_ft_benzin_diesel.png Graphic file (type png)
 <use ./Pictures/model_ds_ft_benzin_diesel.png>
 Package pdftex.def Info: ./Pictures/model_ds_ft_benzin_diesel.png  used on inpu
-t line 233.
+t line 265.
 (pdftex.def)             Requested size: 292.68831pt x 215.20018pt.
-<./Pictures/model_ds_w2v_benzin_diesel.png, id=213, 730.73pt x 538.01pt>
+<./Pictures/model_ds_w2v_benzin_diesel.png, id=226, 730.73pt x 538.01pt>
 File: ./Pictures/model_ds_w2v_benzin_diesel.png Graphic file (type png)
 <use ./Pictures/model_ds_w2v_benzin_diesel.png>
 Package pdftex.def Info: ./Pictures/model_ds_w2v_benzin_diesel.png  used on inp
-ut line 242.
+ut line 274.
 (pdftex.def)             Requested size: 292.28682pt x 215.20018pt.
-<./Pictures/model_ft_motor_getriebe.png, id=214, 723.70375pt x 538.01pt>
+<./Pictures/model_ft_motor_getriebe.png, id=227, 723.70375pt x 538.01pt>
 File: ./Pictures/model_ft_motor_getriebe.png Graphic file (type png)
 <use ./Pictures/model_ft_motor_getriebe.png>
 Package pdftex.def Info: ./Pictures/model_ft_motor_getriebe.png  used on input 
-line 249.
+line 281.
 (pdftex.def)             Requested size: 289.47636pt x 215.20018pt.
-<./Pictures/model_ds_ft_motor_getriebe.png, id=215, 756.8275pt x 538.01pt>
+<./Pictures/model_ds_ft_motor_getriebe.png, id=228, 756.8275pt x 538.01pt>
 File: ./Pictures/model_ds_ft_motor_getriebe.png Graphic file (type png)
 <use ./Pictures/model_ds_ft_motor_getriebe.png>
 Package pdftex.def Info: ./Pictures/model_ds_ft_motor_getriebe.png  used on inp
-ut line 257.
+ut line 289.
 (pdftex.def)             Requested size: 302.72563pt x 215.20018pt.
-<./Pictures/model_ds_w2v_motor_getriebe.png, id=216, 730.73pt x 538.01pt>
+<./Pictures/model_ds_w2v_motor_getriebe.png, id=229, 730.73pt x 538.01pt>
 File: ./Pictures/model_ds_w2v_motor_getriebe.png Graphic file (type png)
 <use ./Pictures/model_ds_w2v_motor_getriebe.png>
 Package pdftex.def Info: ./Pictures/model_ds_w2v_motor_getriebe.png  used on in
-put line 267.
+put line 299.
 (pdftex.def)             Requested size: 292.28682pt x 215.20018pt.
 
-Overfull \hbox (50.97792pt too wide) in paragraph at lines 277--291
+Overfull \hbox (50.97792pt too wide) in paragraph at lines 309--323
  [] 
  []
 
-[9 <./Pictures/model_ft_benzin_diesel.png>] [10 <./Pictures/model_ds_ft_benzin_
-diesel.png> <./Pictures/model_ds_w2v_benzin_diesel.png>] [11 <./Pictures/model_
-ft_motor_getriebe.png> <./Pictures/model_ds_ft_motor_getriebe.png>]
-Overfull \hbox (7.05846pt too wide) in paragraph at lines 298--300
+[10 <./Pictures/model_ft_benzin_diesel.png>] [11 <./Pictures/model_ds_ft_benzin
+_diesel.png> <./Pictures/model_ds_w2v_benzin_diesel.png>] [12 <./Pictures/model
+_ft_motor_getriebe.png> <./Pictures/model_ds_ft_motor_getriebe.png>]
+Overfull \hbox (7.05846pt too wide) in paragraph at lines 330--332
  []$[]$ \OT1/cmr/bx/n/10 Down-stream Clas-si-fi-ca-tion[] \OT1/cmr/m/n/10 The r
 e-sults show that the specif-i-cally trained
  []
 
-[12 <./Pictures/model_ds_w2v_motor_getriebe.png>]
-Underfull \hbox (badness 3746) in paragraph at lines 324--324
+[13 <./Pictures/model_ds_w2v_motor_getriebe.png>]
+File: ./Pictures/model_ft_motor_getriebe.png Graphic file (type png)
+<use ./Pictures/model_ft_motor_getriebe.png>
+Package pdftex.def Info: ./Pictures/model_ft_motor_getriebe.png  used on input 
+line 354.
+(pdftex.def)             Requested size: 172.5pt x 128.23842pt.
+File: ./Pictures/model_ds_ft_motor_getriebe.png Graphic file (type png)
+<use ./Pictures/model_ds_ft_motor_getriebe.png>
+Package pdftex.def Info: ./Pictures/model_ds_ft_motor_getriebe.png  used on inp
+ut line 359.
+(pdftex.def)             Requested size: 172.5pt x 122.62321pt.
+ [14]
+Overfull \hbox (6.13951pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 punc-tu-a-tion, nun-mer-ics, re-dun-dant whites-pace, short wor
+ds and stop words.
+ []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 388--388
 []|\OT1/cmr/m/n/10 gensim Im-ple-men-
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 326--326
+Underfull \hbox (badness 2088) in paragraph at lines 390--390
 []|\OT1/cmr/m/n/10 w/ gen-sim im-ple-
  []
 
 
-Underfull \hbox (badness 1748) in paragraph at lines 326--327
+Underfull \hbox (badness 1748) in paragraph at lines 390--391
 []|\OT1/cmr/m/n/10 n.a., needs global
  []
 
 
-Underfull \hbox (badness 5681) in paragraph at lines 328--328
+Underfull \hbox (badness 5681) in paragraph at lines 392--392
 []|\OT1/cmr/m/n/10 gensim im-ple-men-
  []
 
 
-Underfull \hbox (badness 3240) in paragraph at lines 328--329
+Underfull \hbox (badness 3240) in paragraph at lines 392--393
 []|\OT1/cmr/m/n/10 done w/ un-doc-u-
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 328--329
+Underfull \hbox (badness 1436) in paragraph at lines 392--393
 \OT1/cmr/m/n/10 mented fea-ture in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 \OT1/cmr/m/n/10 Face-book im-ple-
  []
 
 
-Overfull \hbox (49.78264pt too wide) in paragraph at lines 320--331
+Overfull \hbox (49.78264pt too wide) in paragraph at lines 384--395
  [] 
  []
 
-[13]
-Overfull \hbox (32.74696pt too wide) in paragraph at lines 345--346
+[15]
+Overfull \hbox (32.74696pt too wide) in paragraph at lines 409--410
 [][]$\OT1/cmtt/m/n/10 https : / / github . com / kudkudak / word-[]embeddings-[
 ]benchmarks / blob / master /
  []
 
-(./Project Report.bbl [14])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 359.
- [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
+(./Project Report.bbl [16])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 423.
+ [17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 423.
  (./Project Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 359.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 423.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 423.
 Package rerunfilecheck Info: File `"Project Report".out' has not changed.
-(rerunfilecheck)             Checksum: 31F7EE78BF1AB5D8149EC9E852B81CFE;1160.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 359.
+(rerunfilecheck)             Checksum: 067CA234BCA2D1A94FE49BE36FFA20BB;1220.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 423.
  ) 
 Here is how much of TeX's memory you used:
- 6781 strings out of 492982
- 96531 string characters out of 6134896
- 185756 words of memory out of 5000000
- 10165 multiletter control sequences out of 15000+600000
- 15556 words of font info for 59 fonts, out of 8000000 for 9000
+ 7889 strings out of 492982
+ 116687 string characters out of 6134896
+ 208104 words of memory out of 5000000
+ 11253 multiletter control sequences out of 15000+600000
+ 15855 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,35p,779b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,40p,779b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
@@ -554,14 +679,15 @@ ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "Project Report.pdf" (15 pages, 659595 bytes).
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on "Project Report.pdf" (17 pages, 682017 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
- 80 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

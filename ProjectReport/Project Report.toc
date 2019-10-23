@@ -2,30 +2,31 @@
 \contentsline {subsection}{\numberline {1.1}Overview}{1}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Problem Statement}{2}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Metrics}{2}{subsection.1.3}
-\contentsline {section}{\numberline {2}Analysis}{3}{section.2}
-\contentsline {subsection}{\numberline {2.1}The Dataset}{3}{subsection.2.1}
+\contentsline {section}{\numberline {2}Analysis}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}The Dataset}{4}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Algorithms and Techniques}{4}{subsection.2.2}
-\contentsline {paragraph}{Embedding Algorithms}{4}{section*.2}
-\contentsline {paragraph}{word2vec}{4}{section*.3}
-\contentsline {paragraph}{FastText}{4}{section*.4}
-\contentsline {paragraph}{Evaluation Techniques}{4}{section*.5}
-\contentsline {subsection}{\numberline {2.3}Benchmark Models}{4}{subsection.2.3}
-\contentsline {section}{\numberline {3}Methodology}{6}{section.3}
-\contentsline {subsection}{\numberline {3.1}Data Preprocessing}{6}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Embedding Training}{6}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Evaluating the Embeddings}{6}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Optimization}{7}{subsection.3.4}
-\contentsline {paragraph}{Optimizing the embeddings}{7}{section*.6}
-\contentsline {paragraph}{Optimizing the classifier}{7}{section*.7}
-\contentsline {section}{\numberline {4}Results}{9}{section.4}
-\contentsline {subsection}{\numberline {4.1}Visualizations}{9}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Quantitative Results}{9}{subsection.4.2}
-\contentsline {paragraph}{$\boldsymbol {M_1}$ Downstream Classification}{12}{section*.8}
-\contentsline {paragraph}{$\boldsymbol {M_2}$ Subsystem Classification in Embedding Space}{12}{section*.9}
-\contentsline {paragraph}{$\boldsymbol {M_3}$ Word Analogy}{13}{section*.10}
-\contentsline {paragraph}{$\boldsymbol {M_4}$ Word Similarity}{13}{section*.11}
-\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}
-\contentsline {subsection}{\numberline {5.1}Improvement/Future Work}{13}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Additional Research Questions}{13}{subsection.5.2}
-\contentsline {paragraph}{Extra Dimesions.}{14}{section*.12}
-\contentsline {paragraph}{Compund Nouns.}{14}{section*.13}
+\contentsline {paragraph}{Embedding Algorithms}{4}{section*.3}
+\contentsline {paragraph}{word2vec}{5}{section*.4}
+\contentsline {paragraph}{FastText}{5}{section*.7}
+\contentsline {paragraph}{Evaluation Techniques}{5}{section*.8}
+\contentsline {subsection}{\numberline {2.3}Benchmark Models}{5}{subsection.2.3}
+\contentsline {section}{\numberline {3}Methodology}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Data Preprocessing}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Embedding Training}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Evaluating the Embeddings}{7}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Optimization}{8}{subsection.3.4}
+\contentsline {paragraph}{Optimizing the embeddings}{8}{section*.9}
+\contentsline {paragraph}{Optimizing the classifier}{8}{section*.10}
+\contentsline {section}{\numberline {4}Results}{10}{section.4}
+\contentsline {subsection}{\numberline {4.1}Visualizations}{10}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Quantitative Results}{10}{subsection.4.2}
+\contentsline {paragraph}{$\boldsymbol {M_1}$ Downstream Classification}{13}{section*.19}
+\contentsline {paragraph}{$\boldsymbol {M_2}$ Subsystem Classification in Embedding Space}{13}{section*.20}
+\contentsline {paragraph}{$\boldsymbol {M_3}$ Word Analogy}{14}{section*.21}
+\contentsline {paragraph}{$\boldsymbol {M_4}$ Word Similarity}{14}{section*.22}
+\contentsline {section}{\numberline {5}Conclusion}{14}{section.5}
+\contentsline {subsection}{\numberline {5.1}Reflection}{15}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Improvement/Future Work}{15}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Additional Research Questions}{15}{subsection.5.3}
+\contentsline {paragraph}{Extra Dimesions.}{16}{section*.24}
+\contentsline {paragraph}{Compund Nouns.}{16}{section*.25}
