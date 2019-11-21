@@ -5,7 +5,7 @@ This project is my Capstone Project for a udacity Machine Learning class.
 
 ## Data
 
-The data corpus for this project is built from 3 different sources (language German:
+The data corpus for this project is built from 3 different sources (language German):
 + specialist books: copyright-protected material, hence not possible to provide
 + text from software change requests: confidential information, hence not possible to provide
 + patents: downloaded from the "Deutsches Patent- und Markenamt" (German Patent Office, www.DPMA.de) via the DEPANITnet database. Filters used were the years 2015-2018, keywords "Brennkraftmaschine" (internal combustion engine) and corresponding IPC classes 
